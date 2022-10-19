@@ -1,0 +1,36 @@
+//van video van Shaun Wegscheid naar inspriratie van Vasarely
+
+let r=1;
+let g=1;
+let b=1;
+let vp=1;
+let hp=1;
+
+function setup () {
+	createCanvas (400,400);
+	background (255);
+	//frameRate(10);
+	rectMode(CENTER);
+    noStroke();
+}
+
+function draw() {
+	r=random (0,255);
+	g=random (255);
+	b=random (0,255);
+	fill (r,g,b);
+	rect (10*hp, 10*vp, 20,20);
+	
+	r=random (0,255);
+	g=random (255);
+	b=random (0,255);
+	fill (r,g,b);
+	circle (10*hp, 10*vp,15);
+	
+hp=hp+2;
+if (hp>40){
+	vp=vp+2;
+	hp=1;
+}
+
+}
